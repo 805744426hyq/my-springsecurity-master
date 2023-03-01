@@ -2,7 +2,6 @@ package com.codermy.myspringsecurity.service.impl;
 
 import com.alibaba.fastjson.JSONArray;
 import com.codermy.myspringsecurity.dao.PermissionDao;
-import com.codermy.myspringsecurity.dao.RolePermissionDao;
 import com.codermy.myspringsecurity.dto.PermissionDto;
 import com.codermy.myspringsecurity.eneity.TbPermission;
 import com.codermy.myspringsecurity.service.PermissionService;
@@ -25,8 +24,6 @@ public class PermissionServiceImpl implements PermissionService {
     @Autowired
     private PermissionDao permissionDao;
 
-    @Autowired
-    private RolePermissionDao rolePermissionDao;
 
     @Override
     public Result<TbPermission> getMenuAll() {
@@ -45,7 +42,7 @@ public class PermissionServiceImpl implements PermissionService {
 
     @Override
     public TbPermission getTbPermissionById(Integer id) {
-            return permissionDao.getTbPermissionById(id);
+        return permissionDao.getTbPermissionById(id);
     }
 
     @Override
@@ -64,8 +61,7 @@ public class PermissionServiceImpl implements PermissionService {
     public List<PermissionDto> buildMenuAllByRoleId(Integer roleId) {
         List<PermissionDto> listByRoleId = permissionDao.listByRoleId(roleId);
         List<PermissionDto> permissionDtos = permissionDao.buildAll();
-        List<PermissionDto> tree = TreeUtil.tree(listByRoleId, permissionDtos);
-        return tree;
+        return TreeUtil.tree(listByRoleId, permissionDtos);
     }
 
     @Override

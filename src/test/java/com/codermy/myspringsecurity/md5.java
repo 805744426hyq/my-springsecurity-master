@@ -1,12 +1,7 @@
 package com.codermy.myspringsecurity;
 
-import com.codermy.myspringsecurity.dao.PermissionDao;
-import com.codermy.myspringsecurity.utils.MD5;
-import org.springframework.beans.factory.annotation.Autowired;
+import cn.hutool.crypto.SecureUtil;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
-
-import java.util.ArrayList;
-import java.util.List;
 
 /**
  * @author codermy
@@ -15,8 +10,8 @@ import java.util.List;
 public class md5 {
     public static void main(String[] args) {
 
-        String ad = "444444";
-        System.out.println(MD5.crypt(ad));
+        String ad = "123456";
+        System.out.println(SecureUtil.md5(ad));
         System.out.println(new BCryptPasswordEncoder().encode(ad));
 
     }
