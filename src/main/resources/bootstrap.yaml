@@ -1,0 +1,34 @@
+server:
+  port: 8083
+spring:
+  profiles:
+    active: dev
+  application:
+    name: my-spring-security
+  jackson:
+    date-format: yyyy-MM-dd HH:mm:ss
+    time-zone: GMT+8
+    # 当地时区
+    locale: zh
+
+  resources:
+    static-locations: classpath:/static/,classpath:/views/
+
+#mybatis配置
+mybatis:
+  configuration:
+    map-underscore-to-camel-case: true
+    auto-mapping-behavior: full
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+  mapper-locations: classpath*:mapper/**/*.xml
+  global-config:
+    db-config:
+      id-type: assign_id
+      logic-delete-field: removed
+      logic-delete-value: 1
+      logic-not-delete-value: 0
+    #刷新mapper 调试神器
+    refresh-mapper: true
+  type-aliases-package: com.codermy.myspringsecurity.entity
+
+api-url: /api

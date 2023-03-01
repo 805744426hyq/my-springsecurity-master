@@ -1,10 +1,5 @@
-server:
-  port: 8083
+
 spring:
-  profiles:
-    active: dev
-  application:
-    name: my-spring-security
   datasource:
     driver-class-name: com.mysql.jdbc.Driver
     url: jdbc:mysql://localhost:3308/my-spring-security?serverTimezone=Asia/Shanghai
@@ -44,14 +39,3 @@ spring:
         reset-enable: true
         login-username: admin
         login-password: admin
-  jackson:
-    date-format: yyyy-MM-dd HH:mm:ss
-    time-zone: GMT+8
-
-#mybatis配置
-mybatis:
-  type-aliases-package: com.codermy.myspringsecurity.entity
-  mapper-locations: classpath:/mybatis-mappers/*
-  configuration:
-    map-underscore-to-camel-case: true
-api-url: /api

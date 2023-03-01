@@ -1,7 +1,6 @@
 # my-springsecurity
 #### 介绍
-这是一款基于springsecurity的极简RBAC权限管理系统  
-[gitee地址](https://gitee.com/mydemy/my-springsecurity) 
+这是一款基于springsecurity的极简RBAC权限管理系统
 ![login](docs/images/login.PNG)
 ![menu](docs/images/menu.PNG)
 ![role](docs/images/role.PNG)
