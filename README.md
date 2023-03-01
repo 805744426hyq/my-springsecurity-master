@@ -1,7 +1,6 @@
 # my-springsecurity
 #### 介绍
-这是一款基于springsecurity的极简RBAC权限管理系统  
-[gitee地址](https://gitee.com/mydemy/my-springsecurity) 
+这是一款基于springsecurity的极简RBAC权限管理系统
 ![login](docs/images/login.PNG)
 ![menu](docs/images/menu.PNG)
 ![role](docs/images/role.PNG)
@@ -39,15 +38,5 @@
 
 2、 本项目还有很多不完善的地方,比如接口的风格和类型，前后端逻辑也不是很全，不过仅仅是作为搞懂springsecurity的入门demo是完全足够了。  
 3、 之后会重新开发一套springsecurity的系统，会集成上jwt、redis等。
-
-
-#### 赞赏
-请作者喝杯咖啡
-
-| 支付宝 | 微信 |
-| ------ | ---- |
-|    <img src="docs/images/支付宝.jpg" width="200px" />    |  <img src="./docs/images/wechat.png" width="200px" />    |
-
-
  
 
