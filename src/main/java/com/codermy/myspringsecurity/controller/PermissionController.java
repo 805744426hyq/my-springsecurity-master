@@ -1,17 +1,14 @@
 package com.codermy.myspringsecurity.controller;
 
 import com.codermy.myspringsecurity.dto.PermissionDto;
-import com.codermy.myspringsecurity.dto.RoleDto;
 import com.codermy.myspringsecurity.eneity.TbPermission;
 import com.codermy.myspringsecurity.service.PermissionService;
 import com.codermy.myspringsecurity.utils.Result;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import lombok.extern.slf4j.Slf4j;
-import org.apache.ibatis.annotations.Param;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.access.prepost.PreAuthorize;
-import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 
@@ -21,7 +18,7 @@ import java.util.List;
  * @author codermy
  * @createTime 2020/6/26
  */
-@Controller
+@RestController
 @RequestMapping("/system/permission")
 @Slf4j
 @Api(tags = "菜单信息相关接口")
@@ -31,7 +28,6 @@ public class PermissionController {
 
 
     @GetMapping("/index")
-    @ResponseBody
     @PreAuthorize("hasAnyAuthority('menu:list')")
     @ApiOperation(value = "菜单列表")
     public Result getMenuAll(){
@@ -39,7 +35,6 @@ public class PermissionController {
     }
 
     @GetMapping("/build")
-    @ResponseBody
     @PreAuthorize("hasAnyAuthority('menu:list')")
     @ApiOperation(value = "绘制菜单树")
     public Result buildMenuAll(){
@@ -47,7 +42,6 @@ public class PermissionController {
         return Result.ok().data(menuAll);
     }
     @GetMapping("/ebuild/{roleId}")
-    @ResponseBody
     @PreAuthorize("hasAnyAuthority('menu:list')")
     @ApiOperation(value = "通过id绘制菜单树")
     public Result buildMenuAllByRoleId(@PathVariable Integer roleId){
@@ -64,7 +58,6 @@ public class PermissionController {
     }
 
     @PostMapping(value = "/add")
-    @ResponseBody
     @PreAuthorize("hasAnyAuthority('menu:add')")
     @ApiOperation(value = "添加菜单")
     public Result<TbPermission> savePermission(@RequestBody TbPermission permission) {
@@ -80,7 +73,6 @@ public class PermissionController {
     }
 
     @PostMapping(value = "/edit")
-    @ResponseBody
     @PreAuthorize("hasAnyAuthority('menu:edit')")
     @ApiOperation(value = "通修改菜单")
     public Result updatePermission(@RequestBody  TbPermission permission) {
@@ -88,7 +80,6 @@ public class PermissionController {
     }
 
     @GetMapping(value = "/delete")
-    @ResponseBody
     @PreAuthorize("hasAnyAuthority('menu:del')")
     @ApiOperation(value = "删除菜单")
     public Result deletePermission(TbPermission tbPermission) {
@@ -96,7 +87,6 @@ public class PermissionController {
     }
 
     @GetMapping(value = "/menu")
-    @ResponseBody
     @ApiOperation(value = "通过id获取菜单")
     public Result<TbPermission> getMenu(Integer userId) {
         return permissionService.getMenu(userId);

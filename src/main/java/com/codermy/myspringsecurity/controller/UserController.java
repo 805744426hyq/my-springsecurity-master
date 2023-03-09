@@ -11,18 +11,17 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
-import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.bind.annotation.RestController;
 
 /**
  * @author codermy
  * @createTime 2020/6/25
  */
-@Controller
+@RestController
 @RequestMapping("/system/user")
 @Slf4j
 @Api(tags = "用户相关接口")
@@ -32,7 +31,6 @@ public class UserController {
     private UserService userService;
 
     @GetMapping("/findUserByFuzzyUsername")
-    @ResponseBody
     @PreAuthorize("hasAnyAuthority('user:list')")
     public Result<TbUser> findUserByFuzzyUsername(PageTableRequest request,String username){
         request.countOffset();
@@ -40,8 +38,7 @@ public class UserController {
     }
 
 
-    @GetMapping("index")
-    @ResponseBody
+    @GetMapping("/index")
     @PreAuthorize("hasAnyAuthority('user:list')")
     @ApiOperation(value = "用户列表")
     public Result<TbUser> index(PageTableRequest pageTableRequest){
@@ -58,7 +55,6 @@ public class UserController {
     }
 
     @PostMapping("/add")
-    @ResponseBody
     @PreAuthorize("hasAnyAuthority('user:add')")
     @ApiOperation(value = "添加用户")
     public Result<TbUser> saveUser(UserDto userDto,Integer roleId){
@@ -73,7 +69,7 @@ public class UserController {
         return userService.save(userDto,roleId);
     }
 
-    @GetMapping("edit")
+    @GetMapping("/edit")
     @PreAuthorize("hasAnyAuthority('user:edit')")
     @ApiOperation(value = "修改用户界面")
     public String editUser(Model model,TbUser tbUser){
@@ -81,8 +77,7 @@ public class UserController {
         return "/system/user/user-edit";
     }
 
-    @PostMapping("edit")
-    @ResponseBody
+    @PostMapping("/edit")
     @PreAuthorize("hasAnyAuthority('user:edit')")
     @ApiOperation(value = "修改用户")
     public Result<TbUser> updateUser(UserDto userDto, Integer roleId){
@@ -95,8 +90,7 @@ public class UserController {
     }
 
 
-    @GetMapping("delete")
-    @ResponseBody
+    @GetMapping("/delete")
     @PreAuthorize("hasAnyAuthority('user:del')")
     @ApiOperation(value = "删除用户")
     public Result deleteUser(UserDto userDto){

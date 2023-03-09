@@ -1,35 +1,27 @@
 package com.codermy.myspringsecurity;
 
 
-import cn.hutool.bloomfilter.BitMapBloomFilter;
-import cn.hutool.crypto.SecureUtil;
+import com.codermy.myspringsecurity.utils.RedisLock;
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
+
+import javax.annotation.Resource;
 
 
 @SpringBootTest
 class MySpringsecurityApplicationTests {
-//    @Autowired
-//    private PermissionDao permissionDao;
+
+    @Resource
+    private RedisLock redisLock;
+
 
     @Test
     void contextLoads() {
-//        List<PermissionDto> listByRoleId = permissionDao.listByRoleId(2);
-//        List<PermissionDto> permissionDtos = permissionDao.buildAll();
-//        List<PermissionDto> tree = TreeUtil.tree(listByRoleId, permissionDtos);
-//        System.out.println(tree);
-        BitMapBloomFilter filter = new BitMapBloomFilter(10);
-        filter.add("123");
-        filter.add("abc");
-        filter.add("ddd");
-        String s = SecureUtil.md5("123456");
-        System.out.println(s);
-
-// 查找
-        boolean abc = filter.contains("abc");
-        boolean contains = filter.contains("444");
-        System.out.println(abc);
-        System.out.println(contains);
+        boolean b = redisLock.lock("123", "hhh");
+        boolean b1 = redisLock.unlock("123", "hhh");
+        String lock = b ? "加锁成功" : "加锁失败";
+        String unlock = b1 ? "解锁成功" : "解锁锁失败";
+        System.out.println(lock + "," + unlock);
 
     }
 
