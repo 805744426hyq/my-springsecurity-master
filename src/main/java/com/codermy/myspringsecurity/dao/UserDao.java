@@ -1,9 +1,8 @@
 package com.codermy.myspringsecurity.dao;
 
 
-import com.codermy.myspringsecurity.eneity.TbUser;
+import com.codermy.myspringsecurity.entity.TbUser;
 import org.apache.ibatis.annotations.*;
-import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 

@@ -1,7 +1,7 @@
 package com.codermy.myspringsecurity.controller;
 
 import com.codermy.myspringsecurity.dto.UserDto;
-import com.codermy.myspringsecurity.eneity.TbUser;
+import com.codermy.myspringsecurity.entity.TbUser;
 import com.codermy.myspringsecurity.service.UserService;
 import com.codermy.myspringsecurity.utils.PageTableRequest;
 import com.codermy.myspringsecurity.utils.Result;

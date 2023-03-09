@@ -1,20 +1,14 @@
 package com.codermy.myspringsecurity.dto;
 
 
-import com.codermy.myspringsecurity.eneity.TbPermission;
-import com.codermy.myspringsecurity.eneity.TbUser;
+import com.codermy.myspringsecurity.entity.TbUser;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.AllArgsConstructor;
-import lombok.Data;
 import lombok.Getter;
 import org.springframework.security.core.GrantedAuthority;
-import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
-import org.springframework.util.StringUtils;
-import java.util.Collection;
-import java.util.Collections;
+
 import java.util.List;
-import java.util.Set;
 import java.util.stream.Collectors;
 
 

@@ -1,7 +1,7 @@
 package com.codermy.myspringsecurity.controller;
 
 import com.codermy.myspringsecurity.dto.RoleDto;
-import com.codermy.myspringsecurity.eneity.TbRole;
+import com.codermy.myspringsecurity.entity.TbRole;
 import com.codermy.myspringsecurity.service.RoleService;
 import com.codermy.myspringsecurity.utils.PageTableRequest;
 import com.codermy.myspringsecurity.utils.Result;

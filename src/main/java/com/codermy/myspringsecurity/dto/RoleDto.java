@@ -1,6 +1,6 @@
 package com.codermy.myspringsecurity.dto;
 
-import com.codermy.myspringsecurity.eneity.TbRole;
+import com.codermy.myspringsecurity.entity.TbRole;
 
 import java.util.List;
 

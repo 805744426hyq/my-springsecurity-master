@@ -1,4 +1,4 @@
-package com.codermy.myspringsecurity.eneity;
+package com.codermy.myspringsecurity.entity;
 
 import io.swagger.annotations.ApiModel;
 import lombok.Data;

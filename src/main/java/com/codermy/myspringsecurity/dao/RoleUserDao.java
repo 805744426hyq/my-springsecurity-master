@@ -1,6 +1,6 @@
 package com.codermy.myspringsecurity.dao;
 
-import com.codermy.myspringsecurity.eneity.TbRoleUser;
+import com.codermy.myspringsecurity.entity.TbRoleUser;
 import org.apache.ibatis.annotations.Delete;
 import org.apache.ibatis.annotations.Insert;
 import org.apache.ibatis.annotations.Mapper;

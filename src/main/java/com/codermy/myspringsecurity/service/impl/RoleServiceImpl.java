@@ -4,20 +4,15 @@ import com.codermy.myspringsecurity.dao.RoleDao;
 import com.codermy.myspringsecurity.dao.RolePermissionDao;
 import com.codermy.myspringsecurity.dao.RoleUserDao;
 import com.codermy.myspringsecurity.dto.RoleDto;
-import com.codermy.myspringsecurity.eneity.TbRole;
-import com.codermy.myspringsecurity.eneity.TbRoleUser;
-import com.codermy.myspringsecurity.eneity.TbUser;
+import com.codermy.myspringsecurity.entity.TbRole;
+import com.codermy.myspringsecurity.entity.TbRoleUser;
 import com.codermy.myspringsecurity.service.RoleService;
 import com.codermy.myspringsecurity.utils.Result;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.security.core.GrantedAuthority;
-import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.stereotype.Service;
 import org.springframework.util.CollectionUtils;
 
 import java.util.List;
-import java.util.Set;
-import java.util.stream.Collectors;
 
 /**
  * @author codermy

@@ -1,12 +1,8 @@
 package com.codermy.myspringsecurity.service;
 
 import com.codermy.myspringsecurity.dto.RoleDto;
-import com.codermy.myspringsecurity.eneity.TbRole;
-import com.codermy.myspringsecurity.eneity.TbUser;
+import com.codermy.myspringsecurity.entity.TbRole;
 import com.codermy.myspringsecurity.utils.Result;
-import org.springframework.security.core.GrantedAuthority;
-
-import java.util.List;
 
 /**
  * @author codermy

@@ -1,6 +1,6 @@
 package com.codermy.myspringsecurity.dto;
 
-import com.codermy.myspringsecurity.eneity.TbUser;
+import com.codermy.myspringsecurity.entity.TbUser;
 
 /**
  * @author codermy

@@ -1,7 +1,7 @@
 package com.codermy.myspringsecurity.controller;
 
 import com.codermy.myspringsecurity.dto.PermissionDto;
-import com.codermy.myspringsecurity.eneity.TbPermission;
+import com.codermy.myspringsecurity.entity.TbPermission;
 import com.codermy.myspringsecurity.service.PermissionService;
 import com.codermy.myspringsecurity.utils.Result;
 import io.swagger.annotations.Api;

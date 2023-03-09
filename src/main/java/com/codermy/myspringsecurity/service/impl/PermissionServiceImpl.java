@@ -3,7 +3,7 @@ package com.codermy.myspringsecurity.service.impl;
 import com.alibaba.fastjson.JSONArray;
 import com.codermy.myspringsecurity.dao.PermissionDao;
 import com.codermy.myspringsecurity.dto.PermissionDto;
-import com.codermy.myspringsecurity.eneity.TbPermission;
+import com.codermy.myspringsecurity.entity.TbPermission;
 import com.codermy.myspringsecurity.service.PermissionService;
 import com.codermy.myspringsecurity.utils.Result;
 import com.codermy.myspringsecurity.utils.TreeUtil;

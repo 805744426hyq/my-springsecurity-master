@@ -2,8 +2,8 @@ package com.codermy.myspringsecurity.service.impl;
 
 import com.codermy.myspringsecurity.dao.PermissionDao;
 import com.codermy.myspringsecurity.dto.JwtUser;
-import com.codermy.myspringsecurity.eneity.TbPermission;
-import com.codermy.myspringsecurity.eneity.TbUser;
+import com.codermy.myspringsecurity.entity.TbPermission;
+import com.codermy.myspringsecurity.entity.TbUser;
 import com.codermy.myspringsecurity.service.RoleService;
 import com.codermy.myspringsecurity.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;

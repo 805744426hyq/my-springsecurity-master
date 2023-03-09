@@ -1,7 +1,7 @@
 package com.codermy.myspringsecurity.dao;
 
 import com.codermy.myspringsecurity.dto.PermissionDto;
-import com.codermy.myspringsecurity.eneity.TbPermission;
+import com.codermy.myspringsecurity.entity.TbPermission;
 import org.apache.ibatis.annotations.*;
 
 import java.util.List;

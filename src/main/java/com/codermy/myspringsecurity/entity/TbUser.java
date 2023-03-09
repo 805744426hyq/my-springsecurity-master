@@ -1,11 +1,8 @@
-package com.codermy.myspringsecurity.eneity;
+package com.codermy.myspringsecurity.entity;
 
-import com.fasterxml.jackson.annotation.JsonFormat;
 import io.swagger.annotations.ApiModel;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
-
-import java.util.Date;
 
 /**
  * @author codermy

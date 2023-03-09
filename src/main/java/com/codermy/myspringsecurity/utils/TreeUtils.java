@@ -2,7 +2,7 @@ package com.codermy.myspringsecurity.utils;
 
 import com.alibaba.fastjson.JSONArray;
 import com.alibaba.fastjson.JSONObject;
-import com.codermy.myspringsecurity.eneity.TbPermission;
+import com.codermy.myspringsecurity.entity.TbPermission;
 
 import java.util.List;
 

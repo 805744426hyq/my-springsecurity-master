@@ -1,6 +1,6 @@
 package com.codermy.myspringsecurity.service;
 
-import com.codermy.myspringsecurity.eneity.TbUser;
+import com.codermy.myspringsecurity.entity.TbUser;
 import com.codermy.myspringsecurity.utils.Result;
 
 /**
